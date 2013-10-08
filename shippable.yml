@@ -6,3 +6,5 @@ before_script: mkdir -p shippable/codecoverage
 script: 
   - coverage run --branch python/sample.py
   - coverage xml -o shippable/codecoverage/coverage.xml python/sample.py
+env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
